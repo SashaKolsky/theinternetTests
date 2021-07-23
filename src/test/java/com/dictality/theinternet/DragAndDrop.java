@@ -1,26 +1,23 @@
 package com.dictality.theinternet;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import org.junit.jupiter.api.*;
+import com.codeborne.selenide.junit5.TextReportExtension;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
-import static com.codeborne.selenide.Condition.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
-import static com.codeborne.selenide.Selenide.*;
-
+@ExtendWith({TextReportExtension.class})
 public class DragAndDrop {
 
     @BeforeAll
     public static void setUpAll() {
         Configuration.browserSize = "1280x800";
         Configuration.baseUrl = "https://the-internet.herokuapp.com/";
-    }
-
-    @BeforeEach
-    public void setUp() {
-        open("https://the-internet.herokuapp.com");
     }
 
     @Test
