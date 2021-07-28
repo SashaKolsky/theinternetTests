@@ -1,3 +1,7 @@
-.gradle
-build
-.idea
+.github
+/.gradle
+/build
+/.idea
+/gradle
+gradlew*
+settings.gradle
